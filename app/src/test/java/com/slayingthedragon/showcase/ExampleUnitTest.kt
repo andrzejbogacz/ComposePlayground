@@ -1,4 +1,4 @@
-package com.sampleapp.todo
+package com.slayingthedragon.showcase
 
 import org.junit.Test
 

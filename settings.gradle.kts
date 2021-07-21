@@ -1,2 +1,2 @@
-rootProject.name = "TodoShowcase"
+rootProject.name = "BookroomShowcase"
 include (":app")
