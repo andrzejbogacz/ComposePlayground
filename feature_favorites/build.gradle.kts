@@ -8,7 +8,6 @@ android {
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = "com.slayingthedragon.bookroomshowcase"
         minSdk = 23
         targetSdk = 30
         versionCode = 1

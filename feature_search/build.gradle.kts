@@ -8,7 +8,6 @@ android {
     buildToolsVersion = "30.0.3"
 
     defaultConfig {
-        applicationId = "com.slayingthedragon.bookroomshowcase"
         minSdk = 23
         targetSdk = 30
         versionCode = 1
@@ -21,8 +20,8 @@ android {
         getByName("release") {
             isMinifyEnabled = false
             proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                ("proguard-rules.pro")
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    ("proguard-rules.pro")
             )
         }
     }
