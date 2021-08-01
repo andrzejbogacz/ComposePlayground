@@ -29,3 +29,4 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{secrets.BASE_SECRET}}
+          branch: dev_branch
