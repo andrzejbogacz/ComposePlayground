@@ -21,7 +21,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          token: ${{secrets.ENV_SECRET}}
+          token: ${{secrets.BASE_SECRET}}
 
       # Make changes to pull request here
       - name: GitHub Pull Request Action
