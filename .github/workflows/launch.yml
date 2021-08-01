@@ -21,11 +21,11 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-        env: ${{secrets.BASE_SECRET}}
       
       - name: Create Pull Request
-        
         uses: peter-evans/create-pull-request@v3.10.0
+        with:
+         token: ${{secrets.BASE_SECRET}}
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
