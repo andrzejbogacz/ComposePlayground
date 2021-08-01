@@ -27,3 +27,4 @@ jobs:
         with:
           destination_branch: "dev_branch"
           github_token: ${{secrets.BASE_SECRET}}
+          pr_assignee: "andrzejbogacz"
