@@ -24,9 +24,8 @@ jobs:
           token: ${{secrets.BASE_SECRET}}
 
       # Make changes to pull request here
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
+      - name: GitHub Pull Request Action
+        uses: repo-sync/pull-request@v2.6
         with:
-          token: ${{secrets.BASE_SECRET}}
-          branch: dev_branch
+          destination_branch: "dev_branch"
+          github_token: ${{secrets.BASE_SECRET}}
