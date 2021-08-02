@@ -19,7 +19,10 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - run: ./gradlew build
+    
       - uses: actions/checkout@v2
+        
 
       # Make changes to pull request here
       - name: GitHub Pull Request Action
