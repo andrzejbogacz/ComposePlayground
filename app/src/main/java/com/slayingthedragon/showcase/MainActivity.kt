@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-//asdasd
+//asdasd123
 
 @Composable
 fun Greeting(name: String) {
