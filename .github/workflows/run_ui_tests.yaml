@@ -31,7 +31,7 @@ jobs:
           api-level: 29
           script: ./gradlew connectedCheck
 
-      - uses: actions/checkout@
+      - uses: actions/checkout@v2
           # Make changes to pull request here
       - name: GitHub Pull Request Action
         uses: repo-sync/pull-request@v2.6
