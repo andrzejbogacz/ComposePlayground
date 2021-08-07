@@ -1,4 +1,4 @@
-name: CI
+name: Run UI tests api 29
 
 # Controls when the workflow will run
 on:
@@ -30,3 +30,12 @@ jobs:
         with:
           api-level: 29
           script: ./gradlew connectedCheck
+
+      - uses: actions/checkout@v2
+          # Make changes to pull request here
+      - name: GitHub Pull Request Action
+        uses: repo-sync/pull-request@v2.6
+        with:
+         destination_branch: "dev_branch"
+         github_token: ${{secrets.BASE_SECRET}}
+         pr_assignee: "andrzejbogacz"
