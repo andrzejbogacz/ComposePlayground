@@ -3,6 +3,10 @@ plugins {
     id("kotlin-android")
 }
 
+android{
+    compileSdk = 30
+}
+
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.21")
     implementation("androidx.core:core-ktx:1.6.0")
@@ -14,6 +18,6 @@ dependencies {
 }
 
 java {
-    java.sourceCompatibility = JavaVersion.VERSION_1_8
-    java.targetCompatibility = JavaVersion.VERSION_1_8
+    java.sourceCompatibility = JavaVersion.VERSION_11
+    java.targetCompatibility = JavaVersion.VERSION_11
 }
