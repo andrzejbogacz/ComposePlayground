@@ -55,9 +55,6 @@ dependencies {
     implementation("androidx.core:core-ktx:1.6.0")
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
-    testImplementation("junit:junit:4.13.2")
-    androidTestImplementation("androidx.test.ext:junit:1.1.3")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
 
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:${rootProject.extra["compose_version"]}")
     debugImplementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
@@ -65,5 +62,28 @@ dependencies {
     implementation("androidx.compose.material:material:${rootProject.extra["compose_version"]}")
     implementation("androidx.compose.ui:ui-tooling-preview:${rootProject.extra["compose_version"]}")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
-    implementation("androidx.activity:activity-compose:1.3.1")
+    api("androidx.activity:activity-compose:1.3.1")
+
+
+    // Tests
+    androidTestImplementation ("androidx.test:core:1.4.0")
+
+    // AndroidJUnitRunner and ("JUnit Rules")
+    androidTestImplementation ("androidx.test:runner:1.4.0")
+    androidTestImplementation ("androidx.test:rules:1.4.0")
+
+    // Assertions
+    androidTestImplementation ("androidx.test.ext:junit:1.1.3")
+    androidTestImplementation ("androidx.test.ext:truth:1.4.0")
+    androidTestImplementation ("com.google.truth:truth:1.0")
+
+    // Espresso dependencies
+    androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-contrib:3.4.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-intents:3.4.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-accessibility:3.4.0")
+    androidTestImplementation ("androidx.test.espresso:espresso-web:3.4.0")
+    androidTestImplementation ("androidx.test.espresso.idling:idling-concurrent:3.4.0")
+
+    androidTestImplementation ("androidx.test.espresso:espresso-idling-resource:3.4.0")
 }
