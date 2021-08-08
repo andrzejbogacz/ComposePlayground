@@ -21,6 +21,9 @@ allprojects {
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
     }
+    tasks.withType<Test> {
+        useJUnitPlatform()
+    }
 }
 
 tasks.register("clean", Delete::class) {
