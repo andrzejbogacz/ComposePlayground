@@ -9,6 +9,7 @@ android{
         minSdk = 23
         testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
     }
+    lintOptions.isWarningsAsErrors = true
 }
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.21")
