@@ -19,6 +19,9 @@ dependencies {
     // Tests core
     androidTestImplementation ("androidx.test:core:1.4.0")
 
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.1")
+    testRuntimeOnly ("org.junit.jupiter:junit-jupiter-engine:5.7.1")
+
     // AndroidJUnitRunner and ("JUnit Rules")
     androidTestImplementation ("androidx.test:runner:1.4.0")
     androidTestImplementation ("androidx.test:rules:1.4.0")
