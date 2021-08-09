@@ -1,4 +1,4 @@
-name: Run UI tests + create pull request
+name: Run UI tests + create pull request on success
 
 # Controls when the workflow will run
 on:
