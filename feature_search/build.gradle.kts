@@ -9,6 +9,7 @@ android{
         minSdk = 23
         testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
     }
+    lintOptions.isWarningsAsErrors = true
 }
 
 dependencies {
