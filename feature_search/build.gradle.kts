@@ -10,6 +10,8 @@ android{
         testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
     }
     lintOptions.isWarningsAsErrors = true
+    lintOptions.isAbortOnError = true
+    lintOptions.isCheckAllWarnings = true
 }
 
 dependencies {
@@ -31,7 +33,7 @@ dependencies {
     // Assertions
     androidTestImplementation ("androidx.test.ext:junit:1.1.3")
     androidTestImplementation ("androidx.test.ext:truth:1.4.0")
-    androidTestImplementation ("com.google.truth:truth:1.0")
+    androidTestImplementation ("com.google.truth:truth:1.0.1")
 
     // Espresso dependencies
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")
