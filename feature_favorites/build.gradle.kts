@@ -9,9 +9,11 @@ android{
         minSdk = 23
         testInstrumentationRunner ="androidx.test.runner.AndroidJUnitRunner"
     }
-    lintOptions.isWarningsAsErrors = true
-    lintOptions.isAbortOnError = true
-    lintOptions.isCheckAllWarnings = true
+    lint {
+        abortOnError = true
+        checkAllWarnings = true
+        warningsAsErrors = true
+    }
 }
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.21")
@@ -32,7 +34,7 @@ dependencies {
     // Assertions
     androidTestImplementation ("androidx.test.ext:junit:1.1.3")
     androidTestImplementation ("androidx.test.ext:truth:1.4.0")
-    androidTestImplementation ("com.google.truth:truth:1.0.1")
+    androidTestImplementation ("com.google.truth:truth:1.1.3")
 
     // Espresso dependencies
     androidTestImplementation ("androidx.test.espresso:espresso-core:3.4.0")

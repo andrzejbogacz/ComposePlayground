@@ -20,10 +20,6 @@ android {
         }
     }
 
-    lintOptions.isWarningsAsErrors = true
-    lintOptions.isAbortOnError = true
-    lintOptions.isCheckAllWarnings = true
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -50,6 +46,11 @@ android {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+    lint {
+        abortOnError = true
+        checkAllWarnings = true
+        warningsAsErrors = true
     }
 }
 
@@ -81,7 +82,10 @@ dependencies {
     // Assertions
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.ext:truth:1.4.0")
-    androidTestImplementation("com.google.truth:truth:1.0.1")
+    androidTestImplementation("com.google.truth:truth:1.1.3")
+
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.0.1")
+
 
     // Espresso dependencies
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
