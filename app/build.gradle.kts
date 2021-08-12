@@ -20,8 +20,6 @@ android {
         }
     }
 
-    lintOptions.isWarningsAsErrors = true
-
     buildTypes {
         getByName("release") {
             isMinifyEnabled = false
@@ -43,12 +41,16 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = rootProject.extra["compose_version"] as String
-        kotlinCompilerVersion = "1.5.10"
     }
     packagingOptions {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+    lint {
+        abortOnError = true
+        checkAllWarnings = true
+        warningsAsErrors = true
     }
 }
 
@@ -58,11 +60,11 @@ dependencies {
     implementation("androidx.appcompat:appcompat:1.3.1")
     implementation("com.google.android.material:material:1.4.0")
 
-    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.0")
-    debugImplementation("androidx.compose.ui:ui-tooling:1.0.0")
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.1")
+    debugImplementation("androidx.compose.ui:ui-tooling:1.0.1")
     implementation("androidx.compose.ui:ui:1.0.1")
-    implementation("androidx.compose.material:material:1.0.0")
-    implementation("androidx.compose.ui:ui-tooling-preview:1.0.0")
+    implementation("androidx.compose.material:material:1.0.1")
+    implementation("androidx.compose.ui:ui-tooling-preview:1.0.1")
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
     api("androidx.activity:activity-compose:1.3.1")
 
@@ -80,7 +82,10 @@ dependencies {
     // Assertions
     androidTestImplementation("androidx.test.ext:junit:1.1.3")
     androidTestImplementation("androidx.test.ext:truth:1.4.0")
-    androidTestImplementation("com.google.truth:truth:1.0")
+    androidTestImplementation("com.google.truth:truth:1.0.1")
+
+    debugImplementation("androidx.compose.ui:ui-test-manifest:1.0.1")
+
 
     // Espresso dependencies
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
