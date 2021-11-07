@@ -4,7 +4,7 @@ name: Run UI tests + create pull request on success
 on:
   # Triggers the workflow on push or pull request events but only for the dev_branch branch
   push:
-    branches:
+   branches:
     - '!dev_branch'
     - '!master'
 
