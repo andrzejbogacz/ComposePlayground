@@ -1,4 +1,2 @@
-rootProject.name = "BookroomShowcase"
+rootProject.name = "ComposePlayground"
 include (":app")
-include(":feature_search")
-include(":feature_favorites")
