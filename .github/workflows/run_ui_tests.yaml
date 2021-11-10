@@ -1,9 +1,12 @@
-name: Run UI tests + create pull request
+name: Run UI tests + create pull request on success
 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the dev_branch branch
   push:
+   branches:
+    - '!dev_branch'
+    - '!master'
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -37,5 +40,5 @@ jobs:
        uses: repo-sync/pull-request@v2.6
        with:
         destination_branch: "dev_branch"
-        github_token: ${{secrets.BASE_SECRET}}
+        github_token: ${{secrets.ENV_SECRET}}
         pr_assignee: "andrzejbogacz"
