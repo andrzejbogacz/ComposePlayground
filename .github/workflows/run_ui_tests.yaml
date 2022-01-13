@@ -38,7 +38,7 @@ jobs:
        
      - name: GitHub Pull Request Action
        uses: repo-sync/pull-request@v2.6
-       with:
+       with: 
         destination_branch: "dev_branch"
         github_token: ${{secrets.ENV_SECRET}}
         pr_assignee: "andrzejbogacz"
