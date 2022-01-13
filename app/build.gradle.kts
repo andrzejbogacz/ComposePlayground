@@ -55,9 +55,9 @@ android {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.5.31")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:1.6.0")
     implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
+    implementation("androidx.appcompat:appcompat:1.4.0")
     implementation("com.google.android.material:material:1.4.0")
 
     androidTestImplementation("androidx.compose.ui:ui-test-junit4:1.0.5")
@@ -69,8 +69,9 @@ dependencies {
     implementation ("androidx.compose.runtime:runtime-livedata:1.0.5")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.4.0")
     api("androidx.activity:activity-compose:1.4.0")
-    api("androidx.navigation:navigation-compose:2.4.0-beta02")
+    api("androidx.navigation:navigation-compose:2.4.0-rc01")
 
+    implementation ("com.google.accompanist:accompanist-insets:0.21.2-beta")
 
     // Tests
     androidTestImplementation ("androidx.test:core:1.4.0")
